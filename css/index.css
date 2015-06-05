@@ -1,0 +1,180 @@
+body {
+  padding-top: 80px;
+}
+.navbar-fixed-top {
+    border: 0;
+}
+.header {
+    background-color: #2a333d;
+}
+.header .separator {
+    border-left: 1px solid #ccc;
+    display: inline-block;
+    height: 10px;
+    margin: 0 20px;
+    width: 1px;
+}
+.header .navbar-toggle {
+    margin-top : 23px;
+    margin-bottom : 23px;
+}
+.header .navbar-brand {
+    height : 80px;
+}
+@media (min-width: 768px) {
+    .navbar-brand img:first-child {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-brand img:first-child {
+        display: block;
+    }
+    .navbar-brand img:last-child {
+        display: none;
+    }
+}
+#navbar .nav {
+    margin-right : 0;
+    padding-top : 28px;
+    padding-bottom : 28px;
+}
+#navbar .navbar-form {
+    margin-top : 23px;
+    margin-bottom : 23px;
+}
+#navbar .logged-user {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+#navbar .logged-user .btn {
+    border: medium none;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 700;
+    padding: 0;
+    text-decoration: none;
+}
+#navbar .logged-user .btn .name {
+    font-weight: 400;
+}
+#navbar .dropdown-menu > li > a > i {
+    margin-right : 15px;
+}
+#navbar .logged-user .open .btn {
+    background-color : transparent;
+}
+.sidebar-left {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar-left {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #383e4e;
+    border-right: 1px solid #eee;
+  }
+}
+.sidebar-left h4 {
+    font-size : 16px;
+}
+.sidebar-left .nav > li > a > span {
+    vertical-align : middle;
+    line-height : 20px;
+}
+.sidebar-left h4 span:last-child,
+.sidebar-left .nav > li > a > span:nth-child(2) {
+    margin-left : 15px;
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > li > a:focus,
+.nav-sidebar > li > a:hover {
+    color : #FFF;
+    background-color : #1b2229;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+.sub-sidebar > li > a {
+    padding-top : 5px;
+    padding-bottom : 5px;
+    padding-left : 69px;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+.main h4 span {
+    padding-right : 20px;
+    vertical-align : top;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main > h5 {
+    padding: 15px;
+}
+.main h5 > strong {
+    margin-right : 5px;
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+.domain-info {
+    margin-bottom : 20px;
+    font-size : 16px;
+}
+.domain-info > div {
+    margin-bottom : 10px;
+}
+.operation .btn {
+    width : 120px;
+}
+@media (max-width: 768px) {
+    .operation .btn {
+        width : 100px;
+    }
+    .operation > div {
+
+    }
+}
+.domain-status {
+    margin-top : 20px;
+}
+.registration-date {
+    margin-top : 20px;
+    margin-bottom : 40px;
+}
+.registration-date .separator {
+    margin-left : 5px;
+    margin-right : 5px;
+}
