@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/提交审核资料.html" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2ac3c3-39ed-4c6c-af4a-111d29839a32" name="Default" comment="删除&#10;">
+    <list default="true" id="6e2ac3c3-39ed-4c6c-af4a-111d29839a32" name="Default" comment="忽略文件&#10;">
       <change type="DELETED" beforePath="E:\project\Domains-Secured\.idea\workspace.xml" afterPath="" />
     </list>
     <ignored path="Domains-Secured.iws" />
@@ -57,6 +57,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -276,7 +279,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434347783591</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="忽略文件&#10;">
+      <created>1434347858477</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1434347858477</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -328,7 +337,8 @@
     <MESSAGE value="修改多选按钮为 span 标签实现" />
     <MESSAGE value="提交审核资料页面&#10;" />
     <MESSAGE value="删除&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除&#10;" />
+    <MESSAGE value="忽略文件&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="忽略文件&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
