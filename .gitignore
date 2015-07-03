@@ -2,3 +2,4 @@
 /.idea/*
 /.idea/*.xml
 *.log
+/bower_components
