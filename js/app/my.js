@@ -1,0 +1,1 @@
+/** * Created by fanxiaolong on 2015/8/25. */define(['exports'], function(exports) {    console.log(exports);    function setMethod () {        exports.foo = function () {            return 'foo';        };    }    setMethod ();});

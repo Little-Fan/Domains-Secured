@@ -11,20 +11,22 @@
 
   // Establish the root object, `window` (`self`) in the browser, or `global` on the server.
   // We use `self` instead of `window` for `WebWorker` support.
+  // root对象在浏览器中是 ‘window’, 在服务器端是 ‘global’
   var root = (typeof self == 'object' && self.self == self && self) ||
             (typeof global == 'object' && global.global == global && global);
-
-
 
   // Set up Backbone appropriately for the environment. Start with AMD.
   if (typeof define === 'function' && define.amd) {
     define(['underscore', 'jquery', 'exports'], function(_, $, exports) {
       // Export global even in AMD case in case this script is loaded with
       // others that may still expect a global Backbone.
+      // 现在 factory() 函数就是匿名函数传入第一个实际参数,而且还把 Backbone 导入到全局变量中
+
       root.Backbone = factory(root, exports, _, $);
     });
 
   // Next for Node.js or CommonJS. jQuery may not be needed as a module.
+  // 在 Node.js or CommonJS 中,  jQuery不是必须.
   } else if (typeof exports !== 'undefined') {
     var _ = require('underscore'), $;
     try { $ = require('jquery'); } catch(e) {}
