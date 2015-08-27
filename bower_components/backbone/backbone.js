@@ -33,6 +33,7 @@
     factory(root, exports, _, $);
 
   // Finally, as a browser global.
+  // 如果环境即没有AMD或者CommonJS环境,则直接导出为全局变量,其中jquery可以是自定义的(模仿jQuery 的APIs，例如 Zepto)
   } else {
     root.Backbone = factory(root, {}, root._, (root.jQuery || root.Zepto || root.ender || root.$));
   }
@@ -130,6 +131,7 @@
     var i = 0, names;
     if (name && typeof name === 'object') {
       // Handle event maps.
+      // void 0 返回的是  undefined
       if (callback !== void 0 && 'context' in opts && opts.context === void 0) opts.context = callback;
       for (names = _.keys(name); i < names.length ; i++) {
         memo = iteratee(memo, names[i], name[names[i]], opts);
@@ -488,7 +490,7 @@
       // For each `set` attribute, update or delete the current value.
       for (var attr in attrs) {
         val = attrs[attr];
-        if (!_.isEqual(current[attr], val)) changes.push(attr);
+        if (!_.isEqual(current[attr], val)) changes.push(attr);   //如果要设置的属性与当前的属性不一致,则增加到 changes 数组中
         if (!_.isEqual(prev[attr], val)) {
           changed[attr] = val;
         } else {
@@ -794,16 +796,18 @@
     // already exist in the collection, as necessary. Similar to **Model#set**,
     // the core operation for updating the data contained by the collection.
     set: function(models, options) {
-      options = _.defaults({}, options, setOptions);
-      if (options.parse && !this._isModel(models)) models = this.parse(models, options);
-      var singular = !_.isArray(models);
-      models = singular ? (models ? [models] : []) : models.slice();
+      options = _.defaults({}, options, setOptions);    //合并参数, 前面的优先级高
+
+      // 如果选项参数中有parse而且models是Model的实例
+      if (options.parse && !this._isModel(models)) models = this.parse(models, options);    //用parse函数先序列化一个models
+      var singular = !_.isArray(models);   //确实models是否是数组
+      models = singular ? (models ? [models] : []) : models.slice();  //如果models是单一的值,转换成长度为 1 的数组或者为空数组;否则,转换成数组
       var id, model, attrs, existing, sort;
-      var at = options.at;
+      var at = options.at;    //可以将模型插入集合中特定的index索引位置
       if (at != null) at = +at;
-      if (at < 0) at += this.length + 1;
-      var sortable = this.comparator && (at == null) && options.sort !== false;
-      var sortAttr = _.isString(this.comparator) ? this.comparator : null;
+      if (at < 0) at += this.length + 1;  //如果为负值,则从最后一个元素开始确实位置,例如 -1 ,则是指最后一个元素
+      var sortable = this.comparator && (at == null) && options.sort !== false;  //是否需要重新排序
+      var sortAttr = _.isString(this.comparator) ? this.comparator : null;   //需要排序的字符串值
       var toAdd = [], toRemove = [], modelMap = {};
       var add = options.add, merge = options.merge, remove = options.remove;
       var order = !sortable && add && remove ? [] : false;
@@ -1263,8 +1267,7 @@
         if (!method) continue;
         var match = key.match(delegateEventSplitter);
         this.delegate(match[1], match[2], _.bind(method, this));
-      }
-      return this;
+      }     return this;
     },
 
     // Add a single event listener to the view's element (or a child element
