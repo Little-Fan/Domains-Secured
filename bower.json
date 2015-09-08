@@ -1,10 +1,10 @@
 {
-  "name": "todomvc-backbone_marionette_require",
+  "name": "backbone_marionette_require",
   "version": "0.0.0",
   "dependencies": {
-    "todomvc-common": "~0.3.0",
+    "backbone": ">=1.1.2"
     "requirejs": "~2.1.6",
-    "underscore": "~1.4.4",
+    "underscore": ">=1.7.0",
     "backbone.marionette": "~1.0.3",
     "backbone.localStorage": "~1.1.4",
     "require-handlebars-plugin": "~1.0.0"
