@@ -139,6 +139,11 @@
 .pt30{padding-top:30px;}
 .pr30{padding-right:30px;}
 .pb30{padding-bottom:30px;}
+.p50{padding:50px;}
+.pl50{padding-left:50px;}
+.pt50{padding-top:50px;}
+.pr50{padding-right:50px;}
+.pb50{padding-bottom:50px;}
 /* border-color name rule: border(b)-position(l/r/t/b/d)-width(null/2)-style(null/sh)-color(first one letter/first two letter) |-> All colors are safe color*/
 .bdc{border:1px solid #ccc;}
 .blc{border-left:1px solid #ccc;}
