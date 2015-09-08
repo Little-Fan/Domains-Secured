@@ -1,20 +1,12 @@
 {
-  "name": "app",
-  "version": "0.0.1",
-  "authors": [
-    "fan xiao long <mynamexiaolong@gmail.com>"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "name": "todomvc-backbone_marionette_require",
+  "version": "0.0.0",
   "dependencies": {
-    "jquery": "~2.0.3",
-    "backbone": "~1.2.1",
-    "bootstrap": "~3.3.4"
+    "todomvc-common": "~0.3.0",
+    "requirejs": "~2.1.6",
+    "underscore": "~1.4.4",
+    "backbone.marionette": "~1.0.3",
+    "backbone.localStorage": "~1.1.4",
+    "require-handlebars-plugin": "~1.0.0"
   }
 }
