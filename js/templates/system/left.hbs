@@ -1,0 +1,10 @@
+<h2><b>后台首页</b></h2>
+{{#each this}}
+    <dl class="{{menuMap this.0.parentId 'class'}}">
+        <dt>{{menuMap this.0.parentId 'name'}}</dt>
+        {{#each this}}
+            <dd><a target="rightBodyIframe" href="{{resourceUrl}}">{{resourceName}}</a></dd>
+        {{/each}}
+    </dl>
+{{/each}}
+

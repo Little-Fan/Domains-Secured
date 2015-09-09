@@ -1,0 +1,1 @@
+/*global define */define([    'backbone',    'common'], function (Backbone, Common) {    'use strict';    return Backbone.Model.extend({        url: 'data/menus.json',        parse: function (response, options) {            response['result'] = _.groupBy(response.result, 'parentId');            return response.result;        }    });});

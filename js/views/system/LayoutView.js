@@ -1,0 +1,1 @@
+/*global define */define([	'marionette',    'hbs!templates/system/layout'], function (Marionette, tmpl) {	'use strict';	return Marionette.LayoutView.extend({        className: 'main',        template: tmpl,        regions: {            leftRegion: ".slider-left",            rightRegion: ".content-right-wrapper"        }    });});

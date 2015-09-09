@@ -1,0 +1,1 @@
+/*global define */define([	'marionette',    'hbs!templates/index/footer'], function (Marionette, tmpl) {	'use strict';	return Marionette.ItemView.extend({		template: tmpl,        className: "s_wrap"	});});

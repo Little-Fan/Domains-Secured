@@ -1,7 +1,7 @@
 /*global define */
 define([
     'marionette',
-    'hbs!templates/content',
+    'hbs!templates/index/content',
     'validation',
     'jquery.serializeObject'
 ], function (Marionette, tmpl) {
@@ -30,7 +30,7 @@ define([
             // See: http://thedersen.com/projects/backbone-validation/#methods/isvalid
             if(this.model.isValid(true)){
                 // this.model.save();
-                alert('��½�ɹ�');
+                alert('成功登陆');
             }
         },
 
@@ -46,6 +46,8 @@ define([
             Backbone.Validation.bind(this, {
                 valid: function (view, attr, selector) {
                     var $el = view.$('#msg');
+                    console.log($el);
+                    $el.html('');
                 },
                 invalid: function (view, attr, error, selector) {
                     var $el = view.$('#msg')

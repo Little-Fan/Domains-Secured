@@ -2,11 +2,18 @@
   "name": "backbone_marionette_require",
   "version": "0.0.0",
   "dependencies": {
-    "backbone": ">=1.1.2"
+    "jquery": "1.11.3",
+    "backbone": ">=1.1.2",
     "requirejs": "~2.1.6",
     "underscore": ">=1.7.0",
-    "backbone.marionette": "~1.0.3",
+    "backbone.marionette": ">=2.4.0",
     "backbone.localStorage": "~1.1.4",
-    "require-handlebars-plugin": "~1.0.0"
+    "require-handlebars-plugin": "~1.0.0",
+    "handlebars": "~4.0.2"
+  },
+  "resolutions": {
+    "backbone": ">=1.1.2",
+    "backbone.babysitter": "^0.1.0",
+    "backbone.wreqr": "^1.0.0"
   }
 }

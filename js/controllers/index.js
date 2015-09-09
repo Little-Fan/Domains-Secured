@@ -1,1 +1,1 @@
-/*global define */define([	'app'], function (app) {	'use strict';	return {		setFilter: function (param) {			app.vent.trigger('todoList:filter', param && param.trim() || '');		},        login: function () {            console.log("login");        }	};});
+/*global define */define([	'app'], function (app) {	'use strict';	return {        login: function (param) {            console.log("login");        },        query: function (param) {            app.vent.trigger('contentLeft:list');        }	};});

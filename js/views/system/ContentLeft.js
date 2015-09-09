@@ -1,0 +1,1 @@
+/*global define */define([	'marionette',    'hbs!templates/system/left'], function (Marionette, tmpl) {	'use strict';	return Marionette.ItemView.extend({		template: tmpl,        modelEvents: {            'sync': 'render'        }	});});

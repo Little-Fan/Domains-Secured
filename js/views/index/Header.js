@@ -1,0 +1,1 @@
+/*global define */define([	'marionette',    'hbs!templates/index/header'], function (Marionette, tmpl) {	'use strict';	return Marionette.ItemView.extend({		template: tmpl,        className: "header"	});});
