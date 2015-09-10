@@ -30,7 +30,7 @@ define([
             // See: http://thedersen.com/projects/backbone-validation/#methods/isvalid
             if(this.model.isValid(true)){
                 // this.model.save();
-                alert('成功登陆');
+                router.navigate('domainQuery', {trigger: true});  //触发进入后台管理页面
             }
         },
 
