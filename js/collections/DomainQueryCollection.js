@@ -1,0 +1,1 @@
+/*global define */define([	'backbone',	'models/DomainQueryModel'], function (Backbone, DomainQueryModel) {	'use strict';	return Backbone.Collection.extend({        url: 'data/domainQuery.json',		model: DomainQueryModel,		comparator: 'id'	});});

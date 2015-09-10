@@ -1,1 +1,1 @@
-/*global define */define([	'marionette'], function (Marionette) {	'use strict';	return Marionette.AppRouter.extend({		appRoutes: {            '': 'index',            'login': 'index',            'home': 'home',            '*error': 'error'		}	});});
+/*global define */define([	'marionette'], function (Marionette) {	'use strict';	return Marionette.AppRouter.extend({		appRoutes: {            '': 'index',            'login': 'index',            'home': 'home',            'home/domainQuery': 'domainQuery',            '*error': 'error'		}	});});
