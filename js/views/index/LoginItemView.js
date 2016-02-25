@@ -50,7 +50,7 @@ define([
                     $el.html('');
                 },
                 invalid: function (view, attr, error, selector) {
-                    var $el = view.$('#msg')
+                    var $el = view.$('#msg');
                     $el.html(error);
                 }
             });
