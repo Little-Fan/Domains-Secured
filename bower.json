@@ -9,7 +9,8 @@
     "backbone.marionette": ">=2.4.0",
     "backbone.localStorage": "~1.1.4",
     "require-handlebars-plugin": "~1.0.0",
-    "handlebars": "~4.0.2"
+    "handlebars": "~4.0.2",
+    "backbone-validation": "0.11.5"
   },
   "resolutions": {
     "backbone": ">=1.1.2",
